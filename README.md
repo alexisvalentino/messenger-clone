@@ -1,86 +1,123 @@
-# Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher (2023)
+# Real-Time Messenger Clone
 
-This is a repository for a Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher.
-Key Features:
+A full-featured real-time messaging application built with modern web technologies. This project implements a WhatsApp-like messenger with real-time updates, group chats, and file sharing capabilities.
 
+![Messenger Clone](https://i.imgur.com/your-screenshot-url.png)
 
-- Real-time messaging using Pusher
-- Message notifications and alerts
-- Tailwind design for sleek UI
-- Tailwind animations and transition effects
-- Full responsiveness for all devices
-- Credential authentication with NextAuth
-- Google authentication integration
-- Github authentication integration
-- File and image upload using Cloudinary CDN
-- Client form validation and handling using react-hook-form
-- Server error handling with react-toast
-- Message read receipts
-- Online/offline user status
-- Group chats and one-on-one messaging
-- Message attachments and file sharing
-- User profile customization and settings
-- How to write POST, GET, and DELETE routes in route handlers (app/api)
-- How to fetch data in server React components by directly accessing the database (WITHOUT API! like Magic!)
-- Handling relations between Server and Child components in a real-time environment
-- Creating and managing chat rooms and channels
+## 🌟 Features
 
-Whether you're an experienced developer looking to expand your skillset or a beginner eager to learn the latest web development technologies, this tutorial has something for everyone. Join us on this exciting journey and take your web development skills to new heights!
+- 💬 Real-time messaging using Pusher
+- 🔔 Message notifications and alerts
+- 🎨 Modern UI with Tailwind CSS
+- 📱 Fully responsive design
+- 🔐 Multiple authentication methods:
+  - Email/Password
+  - Google OAuth
+  - GitHub OAuth
+- 📤 File and image sharing via Cloudinary
+- 👥 Group chat functionality
+- ✅ Message read receipts
+- 🟢 Online/offline user status
+- 📎 File attachments support
+- 👤 User profile customization
 
+## 🛠️ Tech Stack
+
+- **Frontend:**
+  - Next.js 13 (App Router)
+  - React 18
+  - TypeScript
+  - Tailwind CSS
+  - Headless UI
+
+- **Backend:**
+  - Next.js API Routes
+  - Prisma ORM
+  - MongoDB
+  - NextAuth.js
+
+- **Real-time:**
+  - Pusher
+  - WebSockets
+
+- **Storage:**
+  - Cloudinary (for file uploads)
+  - MongoDB (for data)
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-**Node version 14.x**
+- Node.js 14.x or later
+- MongoDB database
+- Pusher account
+- Cloudinary account
+- Google OAuth credentials (optional)
+- GitHub OAuth credentials (optional)
 
-### Cloning the repository
+### Installation
 
-```shell
-git clone https://github.com/AntonioErdeljac/next13-messenger.git
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/messenger-clone.git
+cd messenger-clone
 ```
 
-### Install packages
-
-```shell
-npm i
+2. Install dependencies:
+```bash
+npm install
 ```
 
-### Setup .env file
+3. Set up environment variables:
+Create a `.env` file in the root directory with the following variables:
+```env
+DATABASE_URL="your_mongodb_connection_string"
+NEXTAUTH_SECRET="your_nextauth_secret"
 
+NEXT_PUBLIC_PUSHER_APP_KEY="your_pusher_app_key"
+PUSHER_APP_ID="your_pusher_app_id"
+PUSHER_SECRET="your_pusher_secret"
 
-```js
-DATABASE_URL=
-NEXTAUTH_SECRET=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="your_cloudinary_cloud_name"
 
-NEXT_PUBLIC_PUSHER_APP_KEY=
-PUSHER_APP_ID=
-PUSHER_SECRET=
+# Optional: OAuth credentials
+GITHUB_ID="your_github_client_id"
+GITHUB_SECRET="your_github_client_secret"
 
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
-
-GITHUB_ID=
-GITHUB_SECRET=
-
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
+GOOGLE_CLIENT_ID="your_google_client_id"
+GOOGLE_CLIENT_SECRET="your_google_client_secret"
 ```
 
-### Setup Prisma
-
-```shell
+4. Set up the database:
+```bash
 npx prisma db push
-
 ```
 
-### Start the app
-
-```shell
+5. Run the development server:
+```bash
 npm run dev
 ```
 
-## Available commands
+The application will be available at `http://localhost:3000`
 
-Running commands with npm `npm run [command]`
+## 📝 Available Scripts
 
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Real-time features powered by [Pusher](https://pusher.com/)
+- File storage by [Cloudinary](https://cloudinary.com/)
